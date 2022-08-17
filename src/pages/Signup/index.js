@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import Input from "../../components/Input";
 import Button from "../../components/Button";
-import * as C from "./styles";
-import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import * as C from "./styles";
 
 const Signup = () => {
   const [nome, setNome] = useState("");
@@ -46,13 +47,13 @@ const Signup = () => {
       <C.Label>Crie sua conta</C.Label>
       <C.Content>
         <Input
-          type="nome"
+          type="text"
           placeholder="Digite seu Nome Completo"
           value={nome}
           onChange={(e) => [setNome(e.target.value), setError("")]}
         />
         <Input
-          type="cpf"
+          mask="999.999.999-99"
           placeholder="Digite seu CPF"
           value={cpf}
           onChange={(e) => [setCpf(e.target.value), setError("")]}
