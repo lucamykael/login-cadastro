@@ -4,6 +4,7 @@ import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
+import Remember from "../pages/Remember";
 
 import React from "react";
 
@@ -22,6 +23,8 @@ const RoutesApp = () => {
                     <Route path="/" element={<Signin />} />
                     <Route exact path="/signup" element={<Signup />} /> 
                     <Route path="*" element={<Signin />} />
+                    <Route exact path="/remember" element={<Remember />} />
+                    <Route path="/" element={<Signin />} />
                 </Routes>
             </Fragment>
         </BrowserRouter>
