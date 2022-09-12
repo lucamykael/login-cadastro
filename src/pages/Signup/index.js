@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import useAuth from "../../hooks/useAuth";
 import * as C from "./styles";
+import Button from "../../components/Button";
+import Input from "../../components/Input";
+import useAuth from "../../hooks/useAuth";
 
 const Signup = () => {
   const [nome, setNome] = useState("");
