@@ -41,6 +41,11 @@ export const LabelSignup = styled.label`
   color: white;
 `;
 
+export const LabelRemember = styled.label`
+  font-size: 16px;
+  color: white;
+`;
+
 export const labelError = styled.label`
   font-size: 14px;
   color: red;
