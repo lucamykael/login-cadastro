@@ -65,9 +65,21 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("user_token");
     };
 
+    const remember = (email) => {
+        const usersStorage = JSON.parse(localStorage.getItem("users_db"));
+        
+        const hasUser = usersStorage?.filter((user) => user.email === email);
+
+        console.log(hasUser)
+
+        if (hasUser?.length) {
+            return;
+        }
+    }
+
     return (
         <AuthContext.Provider
-            value={{ user, signed: !!user, signin, signup, signout }}
+            value={{ user, signed: !!user, signin, signup, signout, remember }}
         >
             {children}
         </AuthContext.Provider>
